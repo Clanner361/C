@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="test" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters='&quot;C:\Users\joey2\Documents\Zomer 2024\C\roadplan\example_map&quot;' />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../roadplan/city.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../roadplan/city.h" />
+		<Unit filename="../roadplan/example_map" />
+		<Unit filename="../roadplan/road.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../roadplan/road.h" />
+		<Unit filename="../roadplan/roadplan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../roadplan/salloc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../roadplan/salloc.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

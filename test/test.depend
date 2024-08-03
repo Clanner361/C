@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1722518311 source:c:\users\joey2\documents\zomer 2024\c\roadplan\city.c
+	<stdlib.h>
+	"city.h"
+	"salloc.h"
+
+1722518311 c:\users\joey2\documents\zomer 2024\c\roadplan\city.h
+	"road.h"
+
+1722518312 c:\users\joey2\documents\zomer 2024\c\roadplan\road.h
+	"city.h"
+
+1722518312 c:\users\joey2\documents\zomer 2024\c\roadplan\salloc.h
+	<stdlib.h>
+
+1722518312 source:c:\users\joey2\documents\zomer 2024\c\roadplan\road.c
+	<stdlib.h>
+	"road.h"
+	"salloc.h"
+
+1722674721 source:c:\users\joey2\documents\zomer 2024\c\roadplan\roadplan.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	"salloc.h"
+	"city.h"
+	"road.h"
+
+1722518312 source:c:\users\joey2\documents\zomer 2024\c\roadplan\salloc.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
