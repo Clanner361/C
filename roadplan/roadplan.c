@@ -88,9 +88,9 @@ static City *create_map (FILE *data_file)
 			/* And append new city there */
 			c -> next = city;
 		}
-        
+
 	}
-    printf("InT");
+    printf("InT\n");
 
        /* FIXME (Assignment 5.1)
          * Read number of roads
@@ -116,43 +116,41 @@ static City *create_map (FILE *data_file)
             Road* road;
             Road* r;
 
-            fscanf(data_file, "%s", origin_name, dest_name, &length);
-            
-            if (origin_city != NULL)
-                origin_city = find_city (map, origin_name);
-            else
-            { 
-                fprintf (stderr, "Cannot find city %s on the map\n", origin_name);
-                delete_map (map);
-                exit (EXIT_FAILURE);
-            }
+            fscanf(data_file, "%s %s %d", origin_name, dest_name, &length);
 
-            if (dest_city != NULL)
-                dest_city = find_city (map, dest_name);
-            else
-            {
-                fprintf (stderr, "Cannot find city %s on the map\n", dest_name);
-                delete_map (map);
-                exit (EXIT_FAILURE);
-            }
+			if ((origin_city = find_city (map, origin_name)) == NULL)
+			{
+				fprintf (stderr, "Cannot find origin city %s on the map\n", origin_name);
+				delete_map (map);
+				exit (EXIT_FAILURE);
+			}
+			// origin_city = find_city (map, origin_name);
+
+
+            if ((dest_city = find_city (map, dest_name)) == NULL)
+			{
+				fprintf (stderr, "Cannot find destination city %s on the map\n", dest_name);
+				delete_map (map);
+				exit (EXIT_FAILURE);
+			}
+			// dest_city = find_city (map, dest_name);
 
             road = new_road(origin_city, dest_city, length);
-            map = origin_city;
 
-            if(map->roads == NULL)
+            if(origin_city->roads == NULL)
                 /* This is the first road of this city */
-			    map->roads = road;
+			    origin_city->roads = road;
             else
             {
-                r = map->roads;
+                r = origin_city->roads;
                 while(r->next) r = r->next;
                 /* And append new road there */
                 r->next = road;
             }
+
         }
 
-        printf("InT2");
-
+        printf("InT2\n");
 
 	return map;
 }
