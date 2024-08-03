@@ -1,0 +1,17 @@
+3 aug:
+mingw and codeblocks mingw
+environment variables: accessible by all programs
+workspace open, make github repo-->search version control tab. git rules-->tomorrow
+later: make a new repo
+
+pointers: 
+be careful with reading wild pointers --> undefined behaviour!
+freeing only dynamically allocated memory is necessary
+
+vscode:
+compile using -Wall -g
+use gdb. segfault vague? valgrind!
+
+later:
+make/json? google "How to link all C files automaticly in VSCODE?"
+wsl voor valgrind (files zijn gesynct wss) of vscode in VM of valgrind voor windows
