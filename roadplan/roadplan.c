@@ -173,7 +173,7 @@ static void print_city_roads (City *map)
 }
 
 
-static void find_shortest_roads (City *map)
+static void find_shortest_road_lengths (City *map)
 {
 	/* FIXME  (Assignment 5.2)
          * While input and input != "0"
@@ -182,6 +182,49 @@ static void find_shortest_roads (City *map)
          *    and find the road that has the shortest length
 	 *    Print the destination city and the road length.
 	 */
+    City* city;
+    Road* r; Road* shortest;
+    char origin_name[MAX_STRING_LENGTH + 1];
+    // char zero[] = "\0";
+    int input;
+
+    // input = scanf()
+    // while(input...)
+    //     city = find_city()
+    //     shortest_road_length = first road
+    //     while(road list) 
+    //         r points to next road
+    //         compare current road length with next road length
+    //         the smallest one is the new shortest_road_length
+    //     print the shortes_road        
+
+    input = scanf("%s", origin_name);
+    // printf("%s\n", origin_name);
+    while(input && (strcmp(origin_name,"0") != 0) )  // "0" is a string containing '0' and '\0'
+    {
+        if((city = find_city(map, origin_name)) == NULL)
+            printf("City %s not on map\n", origin_name);
+        else
+        {
+            r = city->roads;
+            if(r != NULL)
+            {
+                shortest = city->roads;
+                while(r->next)
+                {
+                    r = r->next;
+                    if(r->length < shortest->length) shortest = r;
+                }
+                printf("Shortest road from city %s is to city %s: %d\n", origin_name, shortest->destination->name, shortest->length);
+            }
+            else
+                printf("There is no road from city %s\n", origin_name);
+        }
+
+        input = scanf("%s", origin_name);
+    
+    }
+
 }
 
 
@@ -227,7 +270,7 @@ int main (int argc, char *argv[])
 
     printf("DOEI\n");
 
-	// find_shortest_roads (map);
+	find_shortest_road_lengths (map);
 
 	/* Outit			*/
 	if (data_file != NULL)
