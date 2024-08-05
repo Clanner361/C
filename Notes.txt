@@ -1,3 +1,10 @@
+5 aug:
+strcmp accepteert ook string literals als argument zoals "0".
+Let op: "" is een string literal en '' is een character literal. Als je "" gebruikt wordt een '\0' toegevoegd op het einde
+Let op: "0" is dus anders dan "\0"!
+
+Volgende x: string opdracht?
+
 3 aug:
 mingw and codeblocks mingw
 environment variables: accessible by all programs
