@@ -3,13 +3,10 @@ strcmp accepteert ook string literals als argument zoals "0".
 Let op: "" is een string literal en '' is een character literal. Als je "" gebruikt wordt een '\0' toegevoegd op het einde
 Let op: "0" is dus anders dan "\0"!
 
-Volgende x: string opdracht?
-
 3 aug:
 mingw and codeblocks mingw
 environment variables: accessible by all programs
 workspace open, make github repo-->search version control tab. git rules-->tomorrow
-later: make a new repo
 
 pointers: 
 be careful with reading wild pointers --> undefined behaviour!
@@ -22,3 +19,4 @@ use gdb. segfault vague? valgrind!
 later:
 make/json? google "How to link all C files automaticly in VSCODE?"
 wsl voor valgrind (files zijn gesynct wss) of vscode in VM of valgrind voor windows
+make a new repo
